@@ -34,7 +34,7 @@
                 android:id="@+id/high"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Top Price"
+                android:hint="@string/top_price"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
                 android:singleLine="true"/>
@@ -49,7 +49,7 @@
                 android:id="@+id/low"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Floor Price"
+                android:hint="@string/floor_price"
                 android:inputType="numberDecimal"
                 android:maxLines="1"
                 android:singleLine="true"/>
@@ -64,7 +64,7 @@
                 android:id="@+id/stop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Closing Price"
+                android:hint="@string/closing_price"
                 android:imeActionId="@+id/login"
                 android:imeActionLabel="最高价"
                 android:imeOptions="actionUnspecified"

@@ -1,12 +1,10 @@
 package com.example.saud.meta;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -14,7 +12,6 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -47,23 +44,24 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setVisibility(View.GONE);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        //                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        //        drawer.setDrawerListener(toggle);
+        //        toggle.syncState();
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+//        navigationView.setVisibility(View.GONE);
 
         initListener();
 
@@ -118,10 +116,10 @@ public class MainActivity extends AppCompatActivity
         float seH = average + average - lowNum;
         float seL = average + average - hightNum;
 
-        mTvMostHight.setText("Top Price：" + mostH);
-        mTvSecondHight.setText("Second Price：" + seH);
-        mTvSecondLow.setText("Low Price：" + seL);
-        mTvMostLow.setText("Floor Price：" + mostL);
+        mTvMostHight.setText(getString(R.string.top_price) + mostH);
+        mTvSecondHight.setText(getString(R.string.second_price) + seH);
+        mTvSecondLow.setText(getString(R.string.low_price) + seL);
+        mTvMostLow.setText(getString(R.string.floor_price) + mostL);
     }
 
     @Override
@@ -149,7 +147,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            Intent intent = new Intent(this, AboutActivity.class);
+            startActivity(intent);
             return true;
         }
 

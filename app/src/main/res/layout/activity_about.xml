@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.saud.meta.AboutActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="
+
+1、小助手是一个股票计算工具；
+
+2、我们输入前一个交易日的 “最高价”，“最低价”和“收盘价”；
+
+3、通过相关公式计算后，我们可以得到第二天股票的“最高价”、“次高价”、“次低价”、“最低价”；
+
+4、这个值不一定非常精确，但是亲自测试实践后，准确度高达91%；
+
+5、我们可以利用最高价，最低价做相关买卖操作，例如在最低价提交买入订单。又或者在最高价提交卖出订单。
+
+6、如果我们很想买入一只股票，那我们可以在“次低价”提交买入订单，如果我们很想卖出一个股票，我们可以在“次高价”提交卖出订单。
+
+联系电话：18599001010
+微信：494542379
+"/>
+
+</android.support.constraint.ConstraintLayout>

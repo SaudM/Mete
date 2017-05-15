@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">小助手</string>
+    <string name="navigation_drawer_open">打开</string>
+    <string name="navigation_drawer_close">关闭</string>
+    <string name="top_price">最高价：</string>
+    <string name="second_price">次高价：</string>
+    <string name="low_price">次低价：</string>
+    <string name="floor_price">最低价：</string>
+    <string name="action_settings">设置</string>
+    <string name="closing_price">收盘价</string>
+    <string name="action_about">关于</string>
+</resources>
